@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>serveur video</title>
     <style>
         body {
             margin: 40px auto;
@@ -21,15 +21,16 @@
 </head>
 
 <body>
-<h2>HTTP Video Streaming</h2>
+<h2>serveur video</h2>
 <p>
-    Feel free to seek through the video and it only loads the part you want to
-    watch
+    affichage des deux video
 </p>
-<video id="videoPlayer" width="650" controls muted="muted">
+<p>video 720P</p>
+<video class="videoPlayer" width="650" controls muted="muted">
     <source src="/video?name=720P_VIDEO_ULTRAHD_120FPS.mp4" type="video/mp4" />
 </video>
-<video id="videoPlayer" width="650" controls muted="muted">
+<p>8k</p>
+<video class="videoPlayer" width="650" controls muted="muted">
     <source src="/video?name=8K_VIDEO_ULTRAHD_120FPS.webm" type="video/mp4" />
 </video>
 </body>
