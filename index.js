@@ -7,6 +7,7 @@ app.get("/", function (req, res) {
 });
 
 app.get("/video", function (req, res) {
+    const { name } = req.query;
     // Ensure there is a range given for the video
     const range = req.headers.range;
     if (!range) {
@@ -14,8 +15,8 @@ app.get("/video", function (req, res) {
     }
 
     // get video stats (about 61MB)
-    const videoPath = "720P_VIDEO_ULTRAHD_120FPS.mp4";
-    const videoSize = fs.statSync("720P_VIDEO_ULTRAHD_120FPS.mp4").size;
+    const videoPath = `${name}`;
+    const videoSize = fs.statSync(`${name}`).size;
 
     // Parse Range
     // Example: "bytes=32324-"
