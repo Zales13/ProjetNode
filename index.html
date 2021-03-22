@@ -11,7 +11,7 @@
             line-height: 1.6;
             font-size: 18px;
             font-family: "Courier New", Courier, monospace;
-            color: #444;
+            color: #CB4335;
             padding: 0 10px;
         }
         h2 {
@@ -21,13 +21,18 @@
 </head>
 
 <body>
-<h2>HTTP Video Streaming</h2>
+<h2>Serveur de Vidéo Streaming</h2>
 <p>
-    Feel free to seek through the video and it only loads the part you want to
-    watch
+    Vidéo 720P
 </p>
-<video id="videoPlayer" width="650" controls muted="muted" autoplay>
-    <source src="/video" type="video/mp4" />
+<video id="videoPlayer" width="650" controls muted="muted">
+    <source src="/video?name=720P_VIDEO_ULTRAHD_120FPS.mp4" type="video/mp4" />
+</video>
+<p>
+    Vidéo 8K
+</p>
+<video id="videoPlayer" width="650" controls muted="muted">
+    <source src="/video?name=8K_VIDEO_ULTRAHD_120FPS.webm" type="video/mp4" />
 </video>
 </body>
 </html>
