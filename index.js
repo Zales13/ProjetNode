@@ -13,12 +13,11 @@ app.get("/video", function (req, res) {
         res.status(400).send("Requires Range header");
     }
 
-    // get video stats (about 500MB)
+    // get video stats 
     const videoPath = "720P_VIDEO_ULTRAHD_120FPS.mp4";
     const videoSize = fs.statSync("720P_VIDEO_ULTRAHD_120FPS.mp4").size;
 
     // Parse Range
-    // Example: "bytes=32324-"
     const CHUNK_SIZE = 10 ** 6; // 1MB
     const start = Number(range.replace(/\D/g, ""));
     const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
